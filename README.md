@@ -1,2 +1,2 @@
 # ZeroDjangoNews
-ZeroDjangoNews - учебный проект
+ZeroDjangoNews - учебный проект. К сайту прикручен функционал публикации новостей.
