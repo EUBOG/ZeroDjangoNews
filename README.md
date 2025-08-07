@@ -1,0 +1,2 @@
+# ZeroDjangoNews
+ZeroDjangoNews - учебный проект
