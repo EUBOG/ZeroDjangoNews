@@ -1,0 +1,25 @@
+<!-- templates/services.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Услуги{% endblock %}
+
+{% block content %}
+  <h1>Наши услуги</h1>
+  <ul class="list-group">
+    <li class="list-group-item">Разработка сайтов на Django</li>
+    <li class="list-group-item">Интеграция с API</li>
+    <li class="list-group-item">Верстка с Bootstrap</li>
+    <li class="list-group-item">Техническая поддержка</li>
+  </ul>
+
+  <br>
+  <div class="text-center">
+    <img
+      src="{% static 'img/Маскот2.png' %}"
+      alt="Маскот"
+      class="img-fluid rounded shadow"
+      style="max-height: 300px;"
+    >
+  </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+<!-- templates/about.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+  <h1>О нас</h1>
+  <p>Мы — команда разработчиков, создающих качественные веб-решения на Django.</p>
+
+  <br>
+  <div class="text-center">
+    <img
+      src="{% static 'img/Маскот2.png' %}"
+      alt="Маскот"
+      class="img-fluid rounded shadow"
+      style="max-height: 300px;"
+    >
+  </div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<!-- templates/news/news_list.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+  <h1>Новости</h1>
+
+  {% if news_list %}
+    <div class="row">
+      {% for news in news_list %}
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ news.title }}</h5>
+              <p class="text-muted small">
+                <strong>{{ news.author }}</strong> • {{ news.pub_date|date:"d.m.Y H:i" }}
+              </p>
+              <p class="card-text">{{ news.short_description }}</p>
+              <a href="#" class="btn btn-primary">Читать далее</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>Пока нет новостей.</p>
+  {% endif %}
+{% endblock %}

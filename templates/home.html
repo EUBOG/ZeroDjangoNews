@@ -1,0 +1,51 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+  <h1>Добро пожаловать на главную!</h1>
+  <p class="lead">Это главная страница сайта, построенного на Django и Bootstrap.</p>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">О нас</h5>
+          <p class="card-text">Узнайте больше о нашей команде.</p>
+          <a href="{% url 'about' %}" class="btn btn-primary">Подробнее</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Услуги</h5>
+          <p class="card-text">Наши лучшие предложения.</p>
+          <a href="{% url 'services' %}" class="btn btn-primary">Смотреть</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Контакты</h5>
+          <p class="card-text">Свяжитесь с нами.</p>
+          <a href="{% url 'contact' %}" class="btn btn-primary">Написать</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Выводим картинку -->
+  <br>
+  <div class="text-center">
+    <img
+      src="{% static 'img/Маскот2.png' %}"
+      alt="Маскот"
+      class="img-fluid rounded shadow"
+      style="max-height: 300px;"
+    >
+  </div>
+
+{% endblock %}
